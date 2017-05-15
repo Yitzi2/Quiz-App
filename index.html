@@ -1,0 +1,37 @@
+<!DOCTYPE html lang="en">
+<html>
+<head>
+	<title>Bible Quiz App</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="main.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<form class="js-start-page">
+		<p class="intro">Welcome to my Bible quiz.  Press the button to start.</p>
+		<p><button class="start" type="submit">Start the quiz</button></p>
+	</form>
+	<div class="js-quiz-page hidden">
+		<p>Question <span class="js-question-counter"></span> of <span class="js-total-questions">10</p>
+		<p class="js-question"></p>
+		<form class="js-quiz-form">
+			<button class="submit-answer" type="submit">Submit answer</button>
+			<div class="js-answers">
+				<input type="radio" name="answer" id="ans1" value=0><label for="ans1"></label><br/>
+				<input type="radio" name="answer" id="ans2" value=1><label for="ans2"></label><br/>
+				<input type="radio" name="answer" id="ans3" value=2><label for="ans3"></label><br/>
+				<input type="radio" name="answer" id="ans4" value=3><label for="ans4"></label><br/>
+			</div>
+			<p class="js-answer-result hidden">You answered <strong class="js-answer-echo"></strong>.  This is <strong class="js-answer-validity"></strong>.  <button type="submit" class="js-next-question">Next Question</button></p>
+			<p class="js-explanation hidden"></p>
+		</form>
+		<p class="current-score">Current score: <span class="js-num-right right">0</span> questions correct, <span class="js-num-wrong wrong">0</span> incorrect</p>
+	</div>
+	<form class="js-results-page hidden">
+		<p>You finished the quiz!  You got <span class="total-right"></span> questions right (out of <span class="js-total-questions">10</span>).</p>
+		<p><button class="restart" type="submit">Take the quiz again</button></p>
+	</form>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
