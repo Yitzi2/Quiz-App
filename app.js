@@ -133,8 +133,8 @@ function displayQuestion () {
   $(".js-quiz-form input").prop("checked", false);
   $(".js-answer-result, .js-explanation").addClass("hidden");
   $(".submit-answer").removeClass("hidden");
-  $(".js-num-right").text(currentRight);
-  $(".js-num-wrong").text(currentWrong);
+  $(".js-num-right").text(getCurrentRight());
+  $(".js-num-wrong").text(getCurrentWrong());
 }
 
 function displayResult (correctResult) {
